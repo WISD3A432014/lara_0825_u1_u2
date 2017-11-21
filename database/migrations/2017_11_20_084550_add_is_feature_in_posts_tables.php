@@ -16,6 +16,7 @@ class AddIsFeatureInPostsTables extends Migration
         Schema::table('posts', function (Blueprint $table) {
             $table->string('title',500)->change();
             $table->boolean('is_feature')->default(false)->after('content');
+            $table->timestamps();
         });
     }
 
